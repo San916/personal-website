@@ -1,0 +1,278 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat';
+}
+
+.home-page {
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    /* background-color: #20115B; */
+}
+
+/* This just turns any text surrounded by span into this color */
+span {
+
+    color: #fcc6e2;
+}
+.hero {
+    display: flex;
+    margin: 0 15% 0 20%;
+    height: 100%;
+    width: 65%;
+}
+
+/* Contains the Text and svg's on the front page */
+.hero .left-col {
+    width: 40%;
+    margin: 30vh 0;
+}
+
+.hero .right-col {
+    width: 60%;
+    height: 100%;
+}
+
+.left-col h1 {
+    font-family: 'Montserrat';
+    font-size: 3rem;
+    /* color: #C876FF; */
+    color: black;
+    margin: 0 0 20px 0;
+}
+
+.left-col p {
+    font-family: 'Montserrat';
+    font-size: 1.5rem;
+    color: #404040;
+    margin: 0;
+    line-height: 32px;
+    padding: 0 20% 0 0;
+}
+
+.left-col .top ul {
+    list-style-type: none;
+    margin-left: 56px;
+    padding: 0;
+}
+
+.left-col .top ul li {
+    margin-top: 36px;
+}
+
+.left-col .top a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #404040;
+    transition: 0.2s;
+    position: relative;
+}
+
+.left-col .bot ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 36px;
+    margin-top: 20px;
+}
+
+/* For the svg logo links in the left column of the front page */
+.left-col .bot ul li a svg{ 
+    color: #404040;
+    height: 50px;
+    width: 50px;
+    transition: 0.3s;
+}
+
+/* This will make an svg, into whatever colour i need. (because certain svg colours are difficult to change manually)
+    The code i used to turn a certain hex colour into "filter: ..." can be found:
+     https://codepen.io/sosuke/pen/Pjoqqp */
+/* Currrently not being used */
+.left-col .filter-pink {
+    filter: invert(42%) sepia(49%) saturate(4831%) hue-rotate(312deg) brightness(97%) contrast(93%);
+}
+
+.right-col {
+    width: 100%;
+    height: 70vh;
+    
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    overflow: scroll; /* Make it such that only the right column element scrolls */
+
+    box-sizing: border-box;
+
+}
+.right-col .about-me-page {
+    padding: 15vh 0 0;
+}
+.right-col::-webkit-scrollbar { /* Hide scrollbar */
+    display: none;
+}
+.right-col h1 {
+    color: black;
+    margin: 0 0 20px 0;
+    font-size: 3rem;
+}
+.right-col p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 32px;
+    color: #404040;
+}
+.right-col .projects {
+    padding: 0 0 15vh;
+}
+.right-col .project-card {
+    background-color: white;
+    border-color: white;
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+    margin: 32px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.projects .project-card .left {
+    width: 160px;
+    height: 90px;
+    border-color: #f0f0f0;
+    border-style: solid;
+    border-radius: 2px;
+    border-width: 2px;
+    margin: 32px;
+    flex-shrink: 0; /* Prevent left side from shrinking, the right side will shrink instead on resize*/
+}
+
+.projects .project-card .right {
+    width: auto;
+    height: auto;
+    margin: 0 16px 0 0;
+}
+
+.projects .project-card .right h3 {
+    color: black;
+    font-weight: 550;
+}
+
+.projects .project-card .right ul {
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    color: #404040;
+    flex-wrap: wrap;
+}
+
+.projects .project-card .right .tool {
+    background-color: #ffecf2;
+    padding: 5px 10px;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ffecf2;
+    color: #000000;
+    
+}
+
+.projects .project-card .vulkan-object-loader {
+    background-image: url("../images/vulkan-object-loader.JPG");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.projects .project-card .file-viewer-and-compresser {
+    background-image: url("../images/file-explorer-compressor.JPG");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.projects .project-card .notable {
+    background-image: url("../images/notable.JPG");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* 
+--------------------------------------------------------------
+...............Certain front page transitions.................
+--------------------------------------------------------------
+*/
+
+/* Slightly expand and turn black the hovered logo */
+.hero .left-col .bot ul li a svg:hover {
+    color: black;
+    scale: 1.05;
+}
+
+/* Bolden the hovered text */
+.hero .left-col .top a:hover {
+    color: black;
+    font-weight: 550;
+}
+
+/* Stretch a bar under the element */
+.hero .left-col .top a:hover:before {
+    width: 100%;
+}
+
+/* Show border and change bg color */
+.right-col .projects .project-card:hover {
+    border-color: #eaeaea;
+    background-color: #fcfcfc;
+}
+
+@media (max-width: 1500px) {
+    /* CSS that should be displayed if width is equal to or less than 800px goes here */
+
+    .hero {
+        display: block;
+        margin: 0 20% 0 20%;
+        width: 60%;
+    }
+    .hero .left-col {
+        width: 100%;
+        height: auto;
+        margin-top: 15vh;
+        margin-bottom: 15vh;
+    }
+
+    .hero .right-col .about-me-page {
+        padding: 0;
+    }
+
+    .hero .right-col {
+        width: 100%;
+        overflow: visible;
+    }
+
+    .right-col .projects .project-card .left {
+        margin: 32px;
+    }
+    
+    .right-col .projects .project-card .right {
+        width: auto;
+        height: auto;
+        margin: 32px 32px 32px 0;
+    }
+}
+
+@media (max-width: 1200px) {
+    .hero {
+        margin: 0 10% 0 10%;
+        width: 80%;
+    }
+}
+
+@media (max-width: 500px) {
+    .hero {
+        margin: 32px;
+        width: auto;
+    }
+    .hero .right-col .about-me-page {
+        width: 100%;
+    }
+}

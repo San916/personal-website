@@ -269,10 +269,62 @@ span {
 
 @media (max-width: 500px) {
     .hero {
-        margin: 32px;
-        width: auto;
-    }
-    .hero .right-col .about-me-page {
+        margin: 0;
         width: 100%;
     }
+
+    .hero .left-col {
+        margin: 5%;
+        width: 90%;
+        /* padding-right: 5%; */
+    }
+    .left-col .top h1 {
+        font-size: 2rem;
+        margin-bottom: 16px;
+    }
+    .left-col .top p {
+        font-size: 1rem;
+        margin-bottom: 16px;
+    }
+    .left-col .bot  {
+        margin-bottom: 4em;
+    }
+    .left-col .bot ul{ 
+        margin: 0 0 16px;
+    }
+    .left-col .bot ul li a svg{ 
+        height: 32px;
+        width: 32px;
+    }
+
+    .hero .right-col .about-me-page {
+        width: 90%;
+        margin: 5%;
+    }
+
+    .right-col .projects {
+        margin: 5%;
+        margin-top: 6em;
+        width: 90%;
+    }
+    .right-col .projects h2 {
+        margin: 0;
+    }
+    .right-col .projects .project-card {
+        display: grid;
+    }
+
+    .right-col .projects .project-card .right {
+        grid-row-start: 1;
+        grid-row-end: 1;
+        margin: 0;
+    }
+    .right-col .projects .project-card .left {
+        grid-row-start: 2;
+        grid-row-end: 2;
+        margin: 0;
+        width: 320px;
+        height: 180px;
+    }
+
 }

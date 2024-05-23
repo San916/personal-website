@@ -190,6 +190,11 @@ span {
     background-repeat: no-repeat;
     background-size: cover;
 }
+.projects .project-card .stranger-endanger {
+    background-image: url("../images/stranger-endanger.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .projects .project-card .notable {
     background-image: url("../images/notable.JPG");
     background-repeat: no-repeat;
